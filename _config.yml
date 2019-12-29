@@ -1,55 +1,67 @@
-# Welcome to Jekyll!
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
+# Blog Settings
 #
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: semih
+name: semih.github.io
+author: Semih Kırdinli
+description: 
+url: https://semih.github.io
+title: Semih Kırdinli
+subtitle: 
+gravatar_url: https://secure.gravatar.com/avatar/ba1fd23455b3cbbe3a5020816de402b8
+copyright: by Semih Kırdinli
+excerpt_separator: ""   # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed/
+subscribe_rss: https://semih.github.io/rss.xml
 email: semihkirdinli@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: semihkirdinli
-github_username:  semih
 
-# Build settings
-theme: minima
+# Github repositories
+github_user: semih
+github_repo_url: https://github.com/semih/semih.github.io/
+
+# Twitter
+twitter_user: semihkirdinli
+twitter_tweet_button: true
+
+# Disqus Comments
+disqus_short_name: semihkirdinli
+disqus_show_comment_count: true
+
+# Google Analytics
+google_analytics_tracking_id: UA-81569202-1
+
+kramdown:
+  hard_wrap: true
+
+#
+# Jekyll Settings
+#
+permalink: /archive/:year/:month/:day/:title/
+paginate: 10
+paginate_path: "page/:num"
+category_dir: categories
+languages: ["en", "tr"]
+language_default: 'en'
+
+feed:
+  path: rss.xml
+  
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  
 plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-paginate
   - jekyll-feed
+#  - jekyll-multiple-languages
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+  
+exclude_from_localizations: ["javascript", "images", "css", "Gemfile", "scripts", "LICENSE", "README.md"]

@@ -19,6 +19,29 @@ We have numerous sources and manage it using source control management(SCM) DevO
 ![image](/assets/images/basic-git-workflow-lifecycle.png)
 
 ```shell
-semih.github.io $git version
-git version 2.17.2 (Apple Git-113)
+~ $ git version
+   git version 2.17.2 (Apple Git-113)
+```
+git global user name and email configuration
+```shell
+~ $ git config --global user.name "github-username"
+~ $ git config --global user.email "github-useremail"
+~ $ git config --global --list
+```
+### Demo
+Now let's make a demo and execute the first commands.
+Create a repository in Github with the name of "github-repo". Then, clone this repository to your local workspace folder.
+
+Clone the remote repository to your local
+```shell
+~ $ git clone https://github.com/semih/github-demo.git
+~ $ cd github-demo/
+```
+Add README.md file and commit. push it to the remote branch.
+```shell
+~ $ git init
+~ $ git add README.md
+~ $ git commit -m "first commit"
+~ $ git remote add origin https://github.com/semih/github-demo.git
+~ $ git push -u origin master
 ```

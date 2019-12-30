@@ -32,12 +32,12 @@ git global user name and email configuration
 Now let's make a demo and execute the first commands.
 Create a repository in Github with the name of "github-repo". Then, clone this repository to your local workspace folder.
 
-Clone the remote repository to your local
+Clone the remote repository to your local folder.
 ```shell
 ~ $ git clone https://github.com/semih/github-demo.git
 ~ $ cd github-demo/
 ```
-Add README.md file and commit. push it to the remote branch.
+Add README.md file and commit and push it to the remote branch.
 ```shell
 ~ $ git init
 ~ $ git add README.md

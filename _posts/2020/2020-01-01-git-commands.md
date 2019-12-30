@@ -18,7 +18,7 @@ There are 3 states of Git.
 - Staging area (pre-commit holding area)
 - Commit (git repository, history)
 
-![image](/assets/images/basic-git-workflow-lifecycle.png)
+![image](/assets/images/basic-git-workflow-lifecycle.png){ width=30% }
 
 
 {% highlight java %}

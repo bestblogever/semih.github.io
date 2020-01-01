@@ -43,7 +43,7 @@ Add README.md file and commit it.
 ~ $ git commit -m "first commit"
 ```
 
-Push it to the remote branch.
+Push your files that you have added or modified into the remote branch.
  ```shell
 ~ $ git remote add origin https://github.com/semih/github-demo.git
 ~ $ git push -u origin master

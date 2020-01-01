@@ -29,19 +29,22 @@ git global user name and email configuration
 ~ $ git config --global --list
 ```
 ### Demo
-Now let's make a demo and execute the first commands.
-Create a repository in Github with the name of "github-repo". Then, clone this repository to your local workspace folder.
+Now let's make a demo app and execute the first commands in git. At first, create a repository in Github with the name of "github-repo". Then, clone this repository into your local workspace folder.
 
 Clone the remote repository into your local folder.
 ```shell
 ~ $ git clone https://github.com/semih/github-demo.git
 ~ $ cd github-demo/
 ```
-Add README.md file and commit and push it to the remote branch.
+Add README.md file and commit it.
 ```shell
 ~ $ git init
 ~ $ git add README.md
 ~ $ git commit -m "first commit"
+```
+
+Push it to the remote branch.
+ ```shell
 ~ $ git remote add origin https://github.com/semih/github-demo.git
 ~ $ git push -u origin master
 ```

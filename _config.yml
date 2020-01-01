@@ -3,13 +3,13 @@
 #
 name: semih.github.io
 author: Semih Kırdinli
-description: 
+description:
 url: https://semih.github.io
-title: developer basics
-subtitle: 
+title: development basics
+subtitle:
 gravatar_url: https://secure.gravatar.com/avatar/ba1fd23455b3cbbe3a5020816de402b8
 copyright: by Semih Kırdinli
-excerpt_separator: ""   # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed/
+excerpt_separator: "" # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed/
 subscribe_rss: https://semih.github.io/rss.xml
 email: semihkirdinli@gmail.com
 
@@ -39,11 +39,11 @@ paginate: 10
 paginate_path: "page/:num"
 category_dir: categories
 languages: ["en", "tr"]
-language_default: 'en'
+language_default: "en"
 
 feed:
   path: rss.xml
-  
+
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -55,7 +55,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  
+
 plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
@@ -63,5 +63,5 @@ plugins:
   - jekyll-feed
 #  - jekyll-multiple-languages
 
-  
-exclude_from_localizations: ["javascript", "images", "css", "Gemfile", "scripts", "LICENSE", "README.md"]
+exclude_from_localizations:
+  ["javascript", "images", "css", "Gemfile", "scripts", "LICENSE", "README.md"]

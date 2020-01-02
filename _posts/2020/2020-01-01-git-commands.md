@@ -8,7 +8,7 @@ categories: [git]
 tags: [git, source control management, scm]
 ---
 We have numerous sources and manage it using source control management(SCM) DevOps tools like Git, SubVersion, CVS, TFS, ClearCase, Mercurial. Git is a modern distributed version control system. I am going to tell you most useful Git commands and why we need to use those commands. I will explain each step with examples.
-[========]
+&nbsp;
 
 | Git Command Line Tools is consistent | | There are 3 states of Git. |
 | ------------ |-----| ------------ |
@@ -16,8 +16,11 @@ We have numerous sources and manage it using source control management(SCM) DevO
 | - Git Bash on Windows | | - Staging area (pre-commit holding area) |
 |   |  | - Commit (git repository, history) |
 
-![image](/assets/images/basic-git-workflow-lifecycle.png)
+&nbsp;
+![Basic Git Workflow Life Cycle](/assets/images/basic-git-workflow-lifecycle.png)
 
+### Configuration
+If Git is installed in our pc, it tells us the version.
 ```shell
 ~ $ git version
    git version 2.17.2
@@ -28,6 +31,7 @@ git global user name and email configuration
 ~ $ git config --global user.email "email"
 ~ $ git config --global --list
 ```
+&nbsp;
 ### Demo App
 Now let's make a demo app and execute the first commands in git. At first, create a repository in Github with the name of "github-repo". Then, clone this repository into your local workspace folder.
 
@@ -75,3 +79,29 @@ Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 	new file:   start.txt
 ```
+
+We execute "git commit" command and check the status again. As a result, the new file has been moved from staging area into the local repository. Because of there are no other pending changes, Git marks the working directory as clean. But our file is not yet on Github.
+```shell
+~ $ git add .
+~ $ git commit -m "git-commands"
+[master 2cd0af0] git-commands
+ 1 file changed, 1 insertion(+)
+ create mode 100644 start.txt
+~ $ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+nothing to commit, working tree clean
+```
+
+There is one last step we need to do, and that is a push. We need to run "git push origin master" command. "origin" refers to the Github copy of our repository. "master" refers to branch name in the repository. If we did everything correctly, our new file should be on the Github copy of our repository.
+```shell
+~ $ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 299 bytes | 299.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/semih/github-demo.git
+   785389b..2cd0af0  master -> master
+```
+Hope to see you in the next article...

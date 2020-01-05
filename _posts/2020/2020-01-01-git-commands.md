@@ -104,4 +104,15 @@ Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/semih/github-demo.git
    785389b..2cd0af0  master -> master
 ```
+
+### Basic Git Commands
+- Starting a new project
+	- Fresh (no source yet)
+	- Existing source locally
+	- Github project (fork and clone)
+- Basic Workflow (add, commit, push, pull)
+- Working with files (rename, move & delete)
+- History and Aliases
+- Ignoring Unwanted Files
+
 Hope to see you in the next article...

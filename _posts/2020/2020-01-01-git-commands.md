@@ -106,7 +106,7 @@ To https://github.com/semih/github-demo.git
 ```
 &nbsp;
 ### Basic Git Commands
-- Starting a new project
+- Starting a Project
 	- Fresh (no source yet)
 	- Existing source locally
 	- Github project (fork and clone)

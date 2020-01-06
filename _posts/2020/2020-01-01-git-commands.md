@@ -115,4 +115,44 @@ To https://github.com/semih/github-demo.git
 - History and Aliases
 - Ignoring Unwanted Files
 
+Create a new project with "git init command
+```shell
+workspace $ git init fresh-project
+Initialized empty Git repository in /Users/semihkirdinli/workspace/fresh-project/.git/
+workspace $ ls
+fresh-project
+workspace $cd fresh-project/
+fresh-project $ ls -al
+total 0
+drwxr-xr-x  3 semihkirdinli  staff   96  7 Oca 00:58 .
+drwxr-xr-x  6 semihkirdinli  staff  192  7 Oca 00:58 ..
+drwxr-xr-x  9 semihkirdinli  staff  288  7 Oca 00:58 .git
+fresh-project $cd .git/
+.git $ls
+HEAD		description	info		refs
+config		hooks		objects
+```
+
+Git status command tells us that we are on the master branch.
+```shell
+.git $cd ..
+fresh-project $git status
+On branch master
+No commits yet
+nothing to commit (create/copy files and use "git add" to track)
+```
+
+Git caught the untracked files:
+```shell
+fresh-project $mate hipster.txt
+fresh-project $ git status
+On branch master
+No commits yet
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	<span style="color:red">*hipster.txt*</span>.
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+&nbsp;
 Hope to see you in the next article...

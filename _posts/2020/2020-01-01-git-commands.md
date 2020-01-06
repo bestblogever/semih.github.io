@@ -172,8 +172,8 @@ fresh-project $ git commit (file is opening here with our default text editor)
  1 file changed, 1 insertion(+)
  create mode 100644 hipster.txt
 fresh-project $ git status
- On branch master
- nothing to commit, working tree clean
+On branch master
+nothing to commit, working tree clean
 fresh-project $
 ```
 

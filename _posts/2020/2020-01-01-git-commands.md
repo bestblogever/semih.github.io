@@ -135,8 +135,8 @@ config		hooks		objects
 
 Git status command tells us that we are on the master branch.
 ```shell
-.git $cd ..
-fresh-project $git status
+.git $ cd ..
+fresh-project $ git status
 On branch master
 No commits yet
 nothing to commit (create/copy files and use "git add" to track)
@@ -144,15 +144,40 @@ nothing to commit (create/copy files and use "git add" to track)
 
 Git caught the untracked files:
 ```shell
-fresh-project $mate hipster.txt
+fresh-project $ mate hipster.txt
 fresh-project $ git status
 On branch master
 No commits yet
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-	<span style="color:red">*hipster.txt*</span>.
+	hipster.txt
 nothing added to commit but untracked files present (use "git add" to track)
 ```
+
+Changes to be committed means this new file "hipster.txt", is now in the Git staging area. We have a file that's waiting to be committed, but it's not committed yet.
+```shell
+fresh-project $ git add hipster.txt 
+fresh-project $ git status
+On branch master
+No commits yet
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   hipster.txt
+```
+
+If we write only "git commit", our editor lists changes to be committed and i can type the commit message on the top lines of file and save it.
+```shell
+fresh-project $ git commit (file is opening here with our default text editor)
+[master (root-commit) 2296291] Adding new file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hipster.txt
+fresh-project $ git status
+ On branch master
+ nothing to commit, working tree clean
+fresh-project $
+```
+
+
 
 &nbsp;
 Hope to see you in the next article...

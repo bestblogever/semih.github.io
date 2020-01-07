@@ -115,6 +115,8 @@ To https://github.com/semih/github-demo.git
 - History and Aliases
 - Ignoring Unwanted Files
 
+&nbsp;
+#### Starting a Project (Fresh)
 Create a new project with "git init command
 ```shell
 workspace $ git init fresh-project
@@ -176,6 +178,9 @@ On branch master
 nothing to commit, working tree clean
 fresh-project $
 ```
+
+&nbsp;
+#### Starting a Project (Existing source locally)
 
 
 

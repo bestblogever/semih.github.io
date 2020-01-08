@@ -181,8 +181,35 @@ fresh-project $
 
 &nbsp;
 #### Starting a Project (Existing source locally)
+"git init" command is executed in the project folder and then its status is queried.
+First of all we see the untracked files. "git add ." command sends files to the staging area, commit it using "git commit" command and push it to using "git push" command as well.
 
-
+```shell
+project-folder $ git init
+Initialized empty Git repository in /Users/semihkirdinli/workspace/initializr/.git/
+project-folder $ git status
+On branch master
+No commits yet
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.htaccess
+	404.html
+	apple-touch-icon.png
+	browserconfig.xml
+	crossdomain.xml
+	css/
+	favicon.ico
+	fonts/
+	humans.txt
+	index.html
+	js/
+	robots.txt
+	tile-wide.png
+	tile.png
+nothing added to commit but untracked files present (use "git add" to track)
+project-folder $ git add .
+project-folder $ git commit -m "my first commit message"
+```
 
 &nbsp;
 Hope to see you in the next article...

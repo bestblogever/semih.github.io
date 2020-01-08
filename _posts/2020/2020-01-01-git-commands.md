@@ -10,11 +10,10 @@ tags: [git, source control management, scm]
 We have numerous sources and manage it using source control management(SCM) DevOps tools like Git, SubVersion, CVS, TFS, ClearCase, Mercurial. Git is a modern distributed version control system. I am going to tell you most useful Git commands and why we need to use those commands. I will explain each step with examples.
 &nbsp;
 
-| Git Command Line Tools is consistent | | There are 3 states of Git. |
-| ------------ |-----| ------------ |
-| - Terminal on Mac/Linux  |  |  - Working directory |
-| - Git Bash on Windows | | - Staging area (pre-commit holding area) |
-|   |  | - Commit (git repository, history) |
+There are 3 states of Git.
+- Working directory
+- Staging area (pre-commit holding area)
+- Commit (git repository, history)
 
 &nbsp;
 ![Basic Git Workflow Life Cycle](/assets/images/basic-git-workflow-lifecycle.png)
@@ -224,7 +223,7 @@ remote: Total 39 (delta 0), reused 0 (delta 0), pack-reused 39
 Unpacking objects: 100% (39/39), done.
 ~ $ cd starter-web
 starter-web $ 
-starter-web $ls
+starter-web $ ls
 404.html				fonts
 README.md				humans.txt
 apple-touch-icon-precomposed.png	index.html

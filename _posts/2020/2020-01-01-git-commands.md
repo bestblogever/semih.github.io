@@ -213,7 +213,7 @@ project-folder $ git commit -m "my first commit message"
 #### Starting a Project (Fork and clone)
 This part is about how to join an existing project on Github.
 Click fork button on the github page (https://github.com/scm-ninja/starter-web)
-And then the following commands are executed.
+And then the following "git clone" command are executed.
 
 ```shell
 ~ $ git clone https://github.com/semih/starter-web.git

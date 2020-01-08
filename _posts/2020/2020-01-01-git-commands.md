@@ -120,15 +120,15 @@ To https://github.com/semih/github-demo.git
 Create a new project with "git init command
 ```shell
 workspace $ git init fresh-project
-Initialized empty Git repository in /Users/semihkirdinli/workspace/fresh-project/.git/
+Initialized empty Git repository in /Users/semih/workspace/fresh-project/.git/
 workspace $ ls
 fresh-project
 workspace $cd fresh-project/
 fresh-project $ ls -al
 total 0
-drwxr-xr-x  3 semihkirdinli  staff   96  7 Oca 00:58 .
-drwxr-xr-x  6 semihkirdinli  staff  192  7 Oca 00:58 ..
-drwxr-xr-x  9 semihkirdinli  staff  288  7 Oca 00:58 .git
+drwxr-xr-x  3 semih  staff   96  7 Oca 00:58 .
+drwxr-xr-x  6 semih  staff  192  7 Oca 00:58 ..
+drwxr-xr-x  9 semih  staff  288  7 Oca 00:58 .git
 fresh-project $cd .git/
 .git $ls
 HEAD		description	info		refs
@@ -186,7 +186,7 @@ First of all we see the untracked files. "git add ." command sends files to the 
 
 ```shell
 project-folder $ git init
-Initialized empty Git repository in /Users/semihkirdinli/workspace/initializr/.git/
+Initialized empty Git repository in /Users/semih/workspace/initializr/.git/
 project-folder $ git status
 On branch master
 No commits yet
@@ -210,6 +210,10 @@ nothing added to commit but untracked files present (use "git add" to track)
 project-folder $ git add .
 project-folder $ git commit -m "my first commit message"
 ```
+
+&nbsp;
+#### Starting a Project (Fork and clone)
+
 
 &nbsp;
 Hope to see you in the next article...

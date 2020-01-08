@@ -33,7 +33,7 @@ git global user name and email configuration
 ```
 &nbsp;
 ### Demo App
-Now let's make a demo app and execute the first commands in git. At first, create a repository in Github with the name of "github-repo". Then, clone this repository into your local workspace folder.
+Now let's make a demo app and execute the first commands in git. At first, create a repository on Github with the name of "github-repo". Then, clone this repository into your local workspace folder.
 
 Clone the remote repository into your local folder.
 ```shell
@@ -176,13 +176,12 @@ fresh-project $ git commit (file is opening here with our default text editor)
 fresh-project $ git status
 On branch master
 nothing to commit, working tree clean
-fresh-project $
 ```
 
 &nbsp;
 #### Starting a Project (Existing source locally)
 "git init" command is executed in the project folder and then its status is queried.
-First of all we see the untracked files. "git add ." command sends files to the staging area, commit it using "git commit" command and push it to using "git push" command as well.
+First of all we see the untracked files. "git add ." command sends files to the staging area, commit them using "git commit" command and push them using "git push" command as well.
 
 ```shell
 project-folder $ git init
@@ -213,7 +212,26 @@ project-folder $ git commit -m "my first commit message"
 
 &nbsp;
 #### Starting a Project (Fork and clone)
+This part is about how to join an existing project on Github.
+Click fork button on the github page (https://github.com/scm-ninja/starter-web)
+And then the following commands are executed.
 
+```shell
+~ $ git clone https://github.com/semih/starter-web.git
+Cloning into 'starter-web'...
+remote: Enumerating objects: 39, done.
+remote: Total 39 (delta 0), reused 0 (delta 0), pack-reused 39
+Unpacking objects: 100% (39/39), done.
+~ $ cd starter-web
+starter-web $ 
+starter-web $ls
+404.html				fonts
+README.md				humans.txt
+apple-touch-icon-precomposed.png	index.html
+crossdomain.xml				js
+css					robots.txt
+favicon.ico				simple.html
+```
 
 &nbsp;
 Hope to see you in the next article...

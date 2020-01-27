@@ -232,21 +232,23 @@ css					robots.txt
 favicon.ico				simple.html
 ```
 
-#### Stage a file
+#### Basic Workflow (stage a file)
 * `git add -A`
 * `git add -U`
 
-#### Unstage a file
+#### Basic Workflow (unstage a file)
 As known, we move the files to staging area using git add command. Sometimes we shouldn't really move these files or we may have moved it by mistake. All we need to do is using `git reset HEAD <file>...` command to unstage as the terminal says.
 Also `git checkout -- <file>...` command cleans the working directory and discard the changes.
 
-#### Delete a file
+#### Working with files (delete a file)
 `git rm <file>...`
 We can undo the deleted file using `git reset HEAD <file>...`
 and `git checkout -- <file>...` commands in order.
 
-#### Delete a folder
+
+#### Working with files (delete a folder)
 `git rm -rf <folder>...`
+
 
 #### Git History
 * `git help log`
@@ -258,16 +260,16 @@ and `git checkout -- <file>...` commands in order.
 * `git log -- <file>`
 * `git log --follow -- <file>`
 
-#### Git Alias
+
+#### Git Aliases
 After run this command, `git hist` shortcut should be used.
 `git config --global alias.hist "log --all --graph --decorate --oneline"`
 And the shortcuts could be checked from .gitconfig file.
+
 `mate ~/.gitconfig`
 
-#### Git Ignore Files and Folders
+<!--
+#### Git Ignore Files and Folders-->
 
 
-
-
-&nbsp;
 Hope to see you in the next article...

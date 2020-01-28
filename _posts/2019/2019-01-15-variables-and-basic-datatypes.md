@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Variables and Types"
+title: "Variables and Basic DataTypes"
 date: 2019-01-15 23:00:00 Wednesday
 author: semih
 comments: true
@@ -23,6 +23,8 @@ boolean   | true or false            | 1 bit    | true, false | 0...1
 char 		| Unicode character        | 16 bits  | 'a', '\u0041', '\101', '\\', '\'', '\n', 'ß' | '\u0000'...'\uffff' or 0...65,535 inclusive
 
 <div class="datatable-end"></div>
+
+
 
 
 

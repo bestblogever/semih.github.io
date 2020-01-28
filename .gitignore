@@ -1,5 +1,44 @@
+### Jekyll ###
 _site
 .sass-cache
-.jekyll-cache
 .jekyll-metadata
+.jekyll-cache
 vendor
+.DS_Store
+Gemfile.lock
+
+### Gulp ###
+package.json
+/node_modules/
+
+### Compiled Source ###
+*.com
+*.dll
+*.exe
+*.o
+*.so
+
+### Logs and Databases ###
+*.log
+*.sql
+*.sqlite
+
+### MacOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+

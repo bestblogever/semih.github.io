@@ -33,7 +33,7 @@ git global user name and email configuration
 ```
 <br/>
 ### Demo App
-Now let's make a demo app and execute the first commands in git. At first, create a repository on Github with the name of "github-repo". Then, clone this repository into your local workspace folder.
+Now let's make a demo app and run the first commands on git. At first, create a repository on Github with the name of "github-repo". Then, clone this repository into your local workspace folder.
 
 Clone the remote repository into your local folder.
 ```shell
@@ -69,7 +69,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-After executing "git add <file>..." command, git tells us there is a new file in staging area which Git describes as "Changes to be commited". The file is in the staging area awaiting the commit.
+After running "git add <file>..." command, git tells us there is a new file in staging area which Git describes as "Changes to be commited". The file is in the staging area awaiting the commit.
 ```shell
 ~ $ git add start.txt 
 ~ $ git status
@@ -80,7 +80,7 @@ Changes to be committed:
 	new file:   start.txt
 ```
 
-We execute "git commit" command and check the status again. As a result, the new file has been moved from staging area into the local repository. Because of there are no other pending changes, Git marks the working directory as clean. But our file is not yet on Github.
+We execute the "git commit" command and check the status again. As a result, the new file has been moved from staging area into the local repository. Because of there are no other pending changes, Git marks the working directory as clean. But our file is not yet on Github.
 ```shell
 ~ $ git add .
 ~ $ git commit -m "git-commands"
@@ -93,7 +93,7 @@ Your branch is up to date with 'origin/master'.
 nothing to commit, working tree clean
 ```
 
-There is one last step we need to do, and that is a push. We need to run "git push origin master" command. "origin" refers to the Github copy of our repository. "master" refers to branch name in the repository. If we did everything correctly, our new file should be on the Github copy of our repository.
+There is one last step we need to do, and that is a push. We need to execute "git push origin master" command. "origin" refers to the Github copy of our repository. "master" refers to branch name in the repository. If we did everything correctly, our new file should be on the Github copy of our repository.
 ```shell
 ~ $ git push origin master
 Counting objects: 3, done.
@@ -179,8 +179,8 @@ nothing to commit, working tree clean
 ```
 <br/>
 #### Starting a Project (Existing source locally)
-"git init" command is executed in the project folder and then its status is queried.
-First of all we see the untracked files. "git add ." command sends files to the staging area, commit them using "git commit" command and push them using "git push" command as well.
+"git init" command is executed in the project folder.
+First of all we see the untracked files. `git add .` command sends files to the staging area, commit them using "git commit" command and push them using "git push" command as well.
 
 ```shell
 project-folder $ git init
@@ -212,7 +212,7 @@ project-folder $ git commit -m "my first commit message"
 #### Starting a Project (Fork and clone)
 This part is about how to join an existing project on Github.
 Click fork button on the github page (https://github.com/scm-ninja/starter-web)
-Finally, the following "git clone" command are executed.
+Finally, the following `git clone` command are executed.
 
 ```shell
 ~ $ git clone https://github.com/semih/starter-web.git
@@ -263,7 +263,7 @@ and `git checkout -- <file>...` commands in order.
 
 <br/>
 #### Git Aliases
-After run this command, `git hist` shortcut should be used.
+After running this command, `git hist` shortcut should be used.
 `git config --global alias.hist "log --all --graph --decorate --oneline"`
 And the shortcuts could be checked from .gitconfig file.
 

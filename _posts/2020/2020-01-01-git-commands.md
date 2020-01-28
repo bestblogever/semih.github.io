@@ -280,5 +280,7 @@ or when we have log folder in workspace and we don't want to push any files in t
 * `git status`
 * `git commit -am "Excluding log file directory"`
 
+
+[Download source](/assets/files/BasicWorkflow.pdf)<br/>
 If you like this post, please leave a review! <br/>
 Hope to see you in the next article...

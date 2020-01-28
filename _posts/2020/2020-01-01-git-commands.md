@@ -8,16 +8,17 @@ categories: [git]
 tags: [git, source control management, scm]
 ---
 We have numerous sources and manage it using source control management(SCM) DevOps tools like Git, SubVersion, CVS, TFS, ClearCase, Mercurial. Git is a modern distributed version control system. I am going to tell you most useful Git commands and why we need to use those commands. I will explain each step with examples.
-&nbsp;
+<br/>
 
 There are 3 states of Git.
 - Working directory
 - Staging area (pre-commit holding area)
 - Commit (git repository, history)
 
-&nbsp;
+<br/>
 ![Basic Git Workflow Life Cycle](/assets/images/basic-git-workflow-lifecycle.png)
 
+<br/>
 ### Configuration
 If Git is installed in our pc, it tells us the version.
 ```shell
@@ -30,7 +31,7 @@ git global user name and email configuration
 ~ $ git config --global user.email "email"
 ~ $ git config --global --list
 ```
-&nbsp;
+<br/>
 ### Demo App
 Now let's make a demo app and execute the first commands in git. At first, create a repository on Github with the name of "github-repo". Then, clone this repository into your local workspace folder.
 
@@ -103,7 +104,7 @@ Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/semih/github-demo.git
    785389b..2cd0af0  master -> master
 ```
-&nbsp;
+<br/>
 ### Basic Git Commands
 - Starting a Project
 	- Fresh (no source yet)
@@ -114,7 +115,7 @@ To https://github.com/semih/github-demo.git
 - History and Aliases
 - Ignoring Unwanted Files
 
-&nbsp;
+<br/>
 #### Starting a Project (Fresh)
 Create a new project with "git init command
 ```shell
@@ -176,8 +177,7 @@ fresh-project $ git status
 On branch master
 nothing to commit, working tree clean
 ```
-
-&nbsp;
+<br/>
 #### Starting a Project (Existing source locally)
 "git init" command is executed in the project folder and then its status is queried.
 First of all we see the untracked files. "git add ." command sends files to the staging area, commit them using "git commit" command and push them using "git push" command as well.
@@ -208,8 +208,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 project-folder $ git add .
 project-folder $ git commit -m "my first commit message"
 ```
-
-&nbsp;
+<br/>
 #### Starting a Project (Fork and clone)
 This part is about how to join an existing project on Github.
 Click fork button on the github page (https://github.com/scm-ninja/starter-web)
@@ -231,28 +230,27 @@ crossdomain.xml				js
 css					robots.txt
 favicon.ico				simple.html
 ```
-
-&nbsp;
+<br/>
 #### Basic Workflow (stage a file)
 * `git add -A`
 * `git add -U`
 
-&nbsp;
+<br/>
 #### Basic Workflow (unstage a file)
 As known, we move the files to staging area using git add command. Sometimes we shouldn't really move these files or we may have moved it by mistake. All we need to do is using `git reset HEAD <file>...` command to unstage as the terminal says.
 Also `git checkout -- <file>...` command cleans the working directory and discard the changes.
 
-&nbsp;
+<br/>
 #### Working with files (delete a file)
 `git rm <file>...`
 We can undo the deleted file using `git reset HEAD <file>...`
 and `git checkout -- <file>...` commands in order.
 
-&nbsp;
+<br/>
 #### Working with files (delete a folder)
 `git rm -rf <folder>...`
 
-&nbsp;
+<br/>
 #### Git History
 * `git help log`
 * `git log`
@@ -263,18 +261,24 @@ and `git checkout -- <file>...` commands in order.
 * `git log -- <file>`
 * `git log --follow -- <file>`
 
-&nbsp;
+<br/>
 #### Git Aliases
 After run this command, `git hist` shortcut should be used.
 `git config --global alias.hist "log --all --graph --decorate --oneline"`
 And the shortcuts could be checked from .gitconfig file.
 
 `mate ~/.gitconfig`
+<br/>
+#### Ignoring Unwanted Files and Folders
+We don't want to push some files like .DS Store. `ls -al` command lists all files, including the dot files and folders. We have to create a ".gitignore" file, if we don't. We can create it with `mate .gitignore` command and save it. Again we have to write .DS_Store into this file. Afterwards, we add it with `git add .gitignore` command. 
 
-&nbsp;
-#### Git Ignore Files and Folders
+Besides, we can use * statement in the .gitignore file. For example, we might have log files which they have .log extension. If we don't want to push those files, we can extract it with *.log statement. 
 
+or when we have log folder in workspace and we don't want to push any files in the log folder, we should add directly `log/` row in .gitignore file. After running the following commands, it appears that log folder is not pushed.
 
+* `git add .`
+* `git status`
+* `git commit -am "Excluding log file directory"`
 
-
+If you like this post, please leave a review! <br/>
 Hope to see you in the next article...
